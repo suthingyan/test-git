@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding-top: 0;
+        }
+        
+        nav {
+            margin: 0;
+            width: 100%;
+        }
+        
+        nav ul {
+            width: 100%;
+            font-size: 16px;
+            padding: 7px 13px;
+            border-radius: 8px;
+            text-decoration-line: none !important;
+        }
+        
+        .navbar-nav li form {
+            margin-top: 13px;
+        }
+        
+        nav ul li a.active,
+        nav ul li a:hover {
+            font-weight: bold;
+            transition: .5s;
+            text-transform: uppercase;
+        }
+        
+        .bc {
+            border: 1px solid rgba(163, 202, 225, 0.7);
+            ;
+        }
+        
+        .text-white h1 {
+            position: relative;
+            font-size: 2rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            width: 100%;
+            -webkit-text-stroke: 2px;
+            outline-style: none;
+            margin-bottom: 30px;
+            animation: animate 5s linear infinite;
+        }
+        
+        @keyframes animate {
+            0%,
+            18%,
+            20%,
+            50.1%,
+            60%,
+            65.1%,
+            80%,
+            90.1%,
+            92% {
+                color: rgba(163, 202, 225, 0.7);
+                ;
+                text-shadow: none;
+            }
+            18.1%,
+            20.1%,
+            30%,
+            50%,
+            60.1%,
+            65%,
+            80.1%,
+            90%,
+            92.1%,
+            100% {
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary bg-gradient">
+        <div class="container-fluid col-12">
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="image/nav-brand.png" alt="logo" style="width: 50px;">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <form class="d-flex input-group w-auto">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                            <span class="input-group-text border-0" id="search-addon">
+                                <span>
+                                    <i class="fas fa-search text-light"></i>
+                                </span>
+                            <div class="dropdown">
+                                <a class="link-dark me-3 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+
+
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">University</a></li>
+                                    <li><a class="dropdown-item" href="#">Current Location</a></li>
+                                    <li><a class="dropdown-item" href="#">Location</a></li>
+                                    <li><a class="dropdown-item" href="#">Mark</a></li>
+                                </ul>
+                            </div>
+                            </span>
+                        </form>
+                    </li>
+                    <li>
+                        <a class="nav-link p-3" href="#exampleModal" data-mdb-toggle="modal">
+
+                            <span class="text-light">Login</span>
+                        </a>
+                        <!--Login Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-secondary bg-light bg-gradient text-primary">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">
+                                            Login Form
+                                        </h5>
+                                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="display-5  
+                                    text-primary text-center m-5">
+                                            Login Here
+                                        </div>
+                                        <div class="container d-flex justify-content-center">
+                                            <form>
+                                                <!-- UserName input -->
+                                                <div class="form-outline mb-4">
+                                                    <input type="email" id="form2Example" class="form-control" />
+                                                    <label class="form-label" for="form2Example">Username</label>
+                                                </div>
+
+                                                <!-- Email input -->
+                                                <div class="form-outline mb-4">
+                                                    <input type="email" id="form2Example1" class="form-control" />
+                                                    <label class="form-label" for="form2Example1">Email address</label>
+                                                </div>
+
+                                                <!-- Password input -->
+                                                <div class="form-outline mb-4">
+                                                    <input type="password" id="form2Example2" class="form-control" />
+                                                    <label class="form-label" for="form2Example2">Password</label>
+                                                </div>
+
+                                                <!-- 2 column grid layout for inline styling -->
+                                                <div class="row mb-4">
+                                                    <div class="col d-flex justify-content-center">
+                                                        <!-- Checkbox -->
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+                                                            <label class="form-check-label" for="form2Example34">
+                                                            Remember me 
+                                                        </label>
+                                                            <a href="passwordReset.html">Forgotten password?</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Submit button -->
+                                                <a href="navBar.html">
+                                                    <button class="btn btn-primary mb-3" style="width:100%">
+                                                    Sign In
+                                                </button>
+                                                </a>
+                                                <!-- Register buttons -->
+                                                <div class="text-center">
+                                                    <p>
+                                                        <a href="" class="me-3">Already have been account?</a>
+                                                        <a href="#exampleModal1" data-mdb-toggle="modal">Sign up?</a>
+                                                    </p>
+                                                    <p>or sign up with:</p>
+                                                    <a type="button" href="http://www.facebook.com" class="btn btn-primary btn-floating mx-1">
+                                                        <i class="fab fa-facebook-f text-light"></i>
+                                                    </a>
+
+                                                    <a type="button" href="http://www.google.com" class="btn btn-primary btn-floating mx-1">
+                                                        <i class="fab fa-google text-light"></i>
+                                                    </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link p-3" href="#exampleModal1" data-mdb-toggle="modal">
+                            <!-- <i class="fa-sharp fa-solid fa-registered fs-5"></i> -->
+                            <span class="text-light">Register</span>
+                            <link rel="stylesheet" href="register.css">
+                        </a>
+                        <!--Register Modal -->
+                        <div class="modal fade modalfromstylesheet modalfromscript" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content bg-light bg-gradient text-primary">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel1">
+                                            Registration Form
+                                        </h5>
+                                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="display-5 fw-bold 
+                                        text-primary text-center m-5">
+                                            Registration Here
+                                        </div>
+                                        <form id="form" class="form" style="margin-top: 50px; ">
+
+                                            <div class="form-control mb-3 bc">
+                                                <label for="username" class="text-primary">Username</label>
+                                                <input type="text" id="username" placeholder="Enter Username">
+                                                <small>Error Message</small>
+                                            </div>
+                                            <div class="form-control mb-3 bc">
+                                                <label for="email" class="text-primary">Email</label>
+                                                <input type="text" id="email" placeholder="Enter email">
+                                                <small>Error Message</small>
+                                            </div>
+                                            <div class="form-control mb-3 bc">
+                                                <label for="password" class="text-primary">Password</label>
+                                                <input type="password" id="password" placeholder="Enter password">
+                                                <small>Error Message</small>
+                                            </div>
+                                            <div class="form-control mb-3 bc">
+                                                <label for="password2" class="text-primary">Confirm Password</label>
+                                                <input type="password" id="password2" placeholder="Enter password again">
+                                                <small>Error Message</small>
+                                            </div>
+                                            <a href="navBar.html">
+                                                <button class="btn btn-primary">Submit</button>
+                                            </a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="nav-link p-3 hover-edition" href="navBar.html">
+                            <!-- <i class="fa-solid fa-address-book fs-5"></i> -->
+                            <span class="text-light">Guess?</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link p-3 hover-edition" href="navBar.html">
+                            <!-- <i class="fa-sharp fa-solid fa-house fs-5" title="Home"></i> -->
+                            <span class="text-light">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3 hover-edition" href="friend.html">
+                            <!-- <i class="fa-sharp fa-solid fa-user fs-5" title="Friends"></i> -->
+                            <span class="text-light">Friends</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-3 hover-edition" href="post.html">
+                            <!-- <i class="fa-sharp fa-solid fa-address-card fs-5" title="Posts"></i> -->
+                            <span class="text-light">Posts</span>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+            </div>
+            <!-- Notifications -->
+            <div class="mx-4">
+                <a class="" href="notification.html" role="button">
+                    <i class="fas fa-bell text-light fw-bold fs-6"></i>
+                </a>
+            </div>
+            <!-- Avatar -->
+            <div class="dropdown">
+
+                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="Black and White Portrait of a Man" loading="lazy" />
+
+                <a class="link-dark me-3 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+
+
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                    <li>
+                        <a class="dropdown-item" href="profile.html">View profile</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="delete.html">Delete Account</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="navBar.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Right elements -->
+    </nav>
+    <!-- Navbar -->
+    <header>
+        <!-- Intro settings -->
+        <style>
+            /* Default height for small devices */
+            
+            #intro-example {
+                height: 100vh;
+            }
+            /* Height for devices larger than 992px */
+            
+            @media (min-width: 992px) {
+                #intro-example {
+                    height: 100vh;
+                }
+            }
+        </style>
+        <!-- Background image -->
+        <div id="intro-example" class="p-5 text-center bg-image" style="background-image: url('image/ca.png');">
+            <div class="mask" style="background-color: rgba(34, 33, 33, 0.7);">
+
+                <div class="d-flex justify-content-center align-items-center h-100">
+
+                    <div class="text-white">
+
+                        <h1 contenteditable="true">Search University with your result</h1>
+                        <h5 class="mb-2">Best & free guide of university.</h5>
+                        <h5 class="mb-2">And make sure to content with your friends.</h5>
+                        <a class="btn btn-outline-light btn-lg" href="login.html">Start Login</a>
+                        <a class="btn btn-outline-light btn-lg " href="register.html">Register</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Background image -->
+
+    </header>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+</body>
+
+</html>
