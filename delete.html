@@ -23,28 +23,32 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="inner">
-            <h2 class="text-center">Delete your account</h2>
-            <div class="row mt-4">
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card mt-3 ">
+            <div class="card-body">
+                <div class="inner">
+                    <h2 class="text-center">Delete your account</h2>
+                    <div class="row mt-4">
 
-                <div class="col col-12">
-                    <form class="form-control p-3">
-                        <div class="form-outline mb-4">
-                            <input type="password" id="pwdDel" class="form-control" />
-                            <label class="form-label" for="form2Example1">Password</label>
-                        </div>
+                        <div class="col col-12">
+                            <form class="form-control p-3">
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="pwdDel" class="form-control" />
+                                    <label class="form-label" for="form2Example1">Password</label>
+                                </div>
 
-                        <!-- Password input -->
-                        <div class="form-outline mb-4">
-                            <input type="password" id="confirmPwdDel" class="form-control" />
-                            <label class="form-label" for="form2Example2">Confirm Password</label>
-                        </div>
-                        <a href="navBar.html" role="button" class="btn btn-primary btn-block mb-4">
+                                <!-- Password input -->
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="confirmPwdDel" class="form-control" />
+                                    <label class="form-label" for="form2Example2">Confirm Password</label>
+                                </div>
+                                <a href="navBar.html" role="button" class="btn btn-outline-black btn-primary btn-block mb-4">
                         Delete
                         </a>
 
-                    </form>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,66 +56,6 @@
 </body>
 <!-- MDB -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
-<script>
-    const form = document.getElementById('form');
-    const password = document.getElementById('password');
-    const password2 = document.getElementById('password2');
-    //show error color
-    function showError(input, message) {
-        const formControl = input.parentElement;
-        formControl.className = 'form-control error';
-        const small = formControl.querySelector('small');
-        small.innerText = message;
-    }
-    //show success colour
-    function showSucces(input) {
-        const formControl = input.parentElement;
-        formControl.className = 'form-control success';
-    }
-    //checkRequired fields
-    function checkRequired(inputArr) {
-        inputArr.forEach(function(input) {
-            if (input.value.trim() === '') {
-                showError(input, `${getFieldName(input)} is required`)
-            } else {
-                showSucces(input);
-            }
-        });
-    }
 
-    //check input Length
-    function checkLength(input, min, max) {
-        if (input.value.length < min) {
-            showError(input, `${getFieldName(input)} must be at least ${min} characters`);
-        } else if (input.value.length > max) {
-            showError(input, `${getFieldName(input)} must be les than ${max} characters`);
-        } else {
-            showSucces(input);
-        }
-    }
-
-    //get FieldName
-    function getFieldName(input) {
-        return input.id.charAt(0).toUpperCase() + input.id.slice(1);
-    }
-
-    // check passwords match
-    function checkPasswordMatch(input1, input2) {
-        if (input1.value !== input2.value) {
-            showError(input2, 'Passwords do not match');
-        }
-    }
-
-    //Event Listeners
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        checkRequired([password, password2]);
-        checkLength(username, 3, 15);
-        checkLength(password, 6, 25);
-
-        checkPasswordMatch(password, password2);
-    });
-</script>
 
 </html>

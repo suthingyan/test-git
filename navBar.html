@@ -26,13 +26,8 @@
         nav ul {
             width: 100%;
             font-size: 16px;
-            padding: 7px 13px;
             border-radius: 8px;
             text-decoration-line: none !important;
-        }
-        
-        .navbar-nav li form {
-            margin-top: 13px;
         }
         
         nav ul li a.active,
@@ -40,12 +35,14 @@
             font-weight: bold;
             transition: .5s;
             text-transform: uppercase;
-            background-color: black;
+        }
+        
+        nav ul form {
+            padding-top: 5px;
         }
         
         .bc {
             border: 1px solid rgba(163, 202, 225, 0.7);
-            ;
         }
         
         .text-white h1 {
@@ -96,11 +93,12 @@
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand py-0" href="#" style="color: white;">
+
                 <img src="image/nav-brand.png" alt="logo" style="width: 50px;">
             </a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 py-0 ">
                     <li class="nav-item">
                         <form class="d-flex input-group w-auto">
                             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
@@ -124,7 +122,7 @@
                         </form>
                     </li>
                     <li>
-                        <a class="nav-link p-3" href="#exampleModal" data-mdb-toggle="modal">
+                        <a class="nav-link" href="#exampleModal" data-mdb-toggle="modal">
 
                             <span class="text-light">Login</span>
                         </a>
@@ -178,7 +176,7 @@
                                                 </div>
                                                 <!-- Submit button -->
                                                 <a href="navBar.html">
-                                                    <button class="btn btn-primary mb-3" style="width:100%">
+                                                    <button class="btn btn-outline-black btn-primary mb-3" style="width:100%">
                                                     Sign In
                                                 </button>
                                                 </a>
@@ -189,11 +187,11 @@
                                                         <a href="#exampleModal1" data-mdb-toggle="modal">Sign up?</a>
                                                     </p>
                                                     <p>or sign up with:</p>
-                                                    <a type="button" href="http://www.facebook.com" class="btn btn-primary btn-floating mx-1">
+                                                    <a type="button" href="http://www.facebook.com" class="btn btn-outline-black btn-primary btn-floating mx-1">
                                                         <i class="fab fa-facebook-f text-light"></i>
                                                     </a>
 
-                                                    <a type="button" href="http://www.google.com" class="btn btn-primary btn-floating mx-1">
+                                                    <a type="button" href="http://www.google.com" class="btn btn-outline-black btn-primary btn-floating mx-1">
                                                         <i class="fab fa-google text-light"></i>
                                                     </a>
                                                 </div>
@@ -205,7 +203,7 @@
                         </div>
                     </li>
                     <li>
-                        <a class="nav-link p-3" href="#exampleModal1" data-mdb-toggle="modal">
+                        <a class="nav-link" href="#exampleModal1" data-mdb-toggle="modal">
                             <!-- <i class="fa-sharp fa-solid fa-registered fs-5"></i> -->
                             <span class="text-light">Register</span>
                             <link rel="stylesheet" href="register.css">
@@ -248,7 +246,7 @@
                                                 <small>Error Message</small>
                                             </div>
                                             <a href="navBar.html">
-                                                <button class="btn btn-primary">Submit</button>
+                                                <button class="btn btn-outline-black btn-primary">Submit</button>
                                             </a>
                                         </form>
                                     </div>
@@ -257,26 +255,26 @@
                         </div>
                     </li>
                     <li>
-                        <a class="nav-link p-3 hover-edition" href="navBar.html">
+                        <a class="nav-link hover-edition" href="navBar.html">
                             <!-- <i class="fa-solid fa-address-book fs-5"></i> -->
                             <span class="text-light">Guess?</span>
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link p-3 hover-edition" href="navBar.html">
+                        <a class="nav-link hover-edition" href="navBar.html">
                             <!-- <i class="fa-sharp fa-solid fa-house fs-5" title="Home"></i> -->
                             <span class="text-light">Home</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-3 hover-edition" href="friend.html">
+                        <a class="nav-link hover-edition" href="friend.html">
                             <!-- <i class="fa-sharp fa-solid fa-user fs-5" title="Friends"></i> -->
                             <span class="text-light">Friends</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link p-3 hover-edition" href="post.html">
+                        <a class="nav-link hover-edition" href="post.html">
                             <!-- <i class="fa-sharp fa-solid fa-address-card fs-5" title="Posts"></i> -->
                             <span class="text-light">Posts</span>
                         </a>
